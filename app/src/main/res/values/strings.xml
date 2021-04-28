@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Workout</string>
+    <string name="man_flexing_muscles">Man flexing muscles</string>
+    <string name="no_pain">No pain.</string>
+    <string name="no_gain">No Gain.</string>
+    <string name="lets_go">Lets Go</string>
+    <string name="join_now">Join now</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login_here">Login here</string>
+    <string name="username">Username</string>
+    <string name="enter_username_here">Enter your username here</string>
+    <string name="password">Password</string>
+    <string name="enter_password_here">Enter your password here</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="please_enter_your_details_to_proceed">Please enter your details to proceed</string>
+    <string name="please_enter_your_details_to_create_an_account">Please enter your details to create an account</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+</resources>
