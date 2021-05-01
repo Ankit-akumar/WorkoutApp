@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WorkoutApp">
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".SignUpActivity"
             android:label="@string/sign_up"
@@ -18,7 +18,7 @@
             android:name=".LoginActivity"
             android:label="@string/sign_in"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreenActivity" android:theme="@style/SplashScreenStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

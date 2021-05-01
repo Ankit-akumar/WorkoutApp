@@ -23,4 +23,6 @@
     <string name="kcal">kcal</string>
     <string name="week_goal">WEEK GOAL</string>
     <string name="minute">minute</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="abs_workout">abs workout</string>
 </resources>
