@@ -25,4 +25,13 @@
     <string name="minute">minute</string>
     <string name="confirm_password">Confirm password</string>
     <string name="abs_workout">abs workout</string>
+    <string name="chest_workout">chest workout</string>
+    <string name="legs_workout">legs workout</string>
+    <string name="shoulder_workout">shoulder workout</string>
+    <string name="arms_workout">arms workout</string>
+    <string name="shirtless_man_training_abs_on_mat">shirtless man training abs on mat</string>
+    <string name="muscular_man_doing_weight_lifting">muscular man doing weight lifting</string>
+    <string name="sportsman_doing_squats_in_gym">sportsman doing squats in gym</string>
+    <string name="strong_muscular_man_lifting_dumbbell">strong muscular man lifting dumbbell</string>
+    <string name="medium_shot_man_stretching_arm">medium shot man stretching arm</string>
 </resources>
