@@ -1,10 +1,5 @@
 <resources>
     <string name="app_name">Workout</string>
-    <string name="man_flexing_muscles">Man flexing muscles</string>
-    <string name="no_pain">No pain.</string>
-    <string name="no_gain">No Gain.</string>
-    <string name="lets_go">Lets Go</string>
-    <string name="join_now">Join now</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="username">Username</string>
     <string name="enter_username_here">Enter username here</string>
@@ -34,4 +29,5 @@
     <string name="sportsman_doing_squats_in_gym">sportsman doing squats in gym</string>
     <string name="strong_muscular_man_lifting_dumbbell">strong muscular man lifting dumbbell</string>
     <string name="medium_shot_man_stretching_arm">medium shot man stretching arm</string>
+    <string name="logo_of_app">Logo of App</string>
 </resources>

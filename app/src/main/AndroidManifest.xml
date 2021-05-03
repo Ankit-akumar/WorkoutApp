@@ -12,12 +12,10 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".SignUpActivity"
-            android:label="@string/sign_up"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/sign_in"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity android:name=".SplashScreenActivity" android:theme="@style/SplashScreenStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
