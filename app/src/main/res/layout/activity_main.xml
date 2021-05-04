@@ -4,24 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
-    android:orientation="vertical"
-    android:paddingLeft="@dimen/screen_padding"
-    android:paddingTop="@dimen/screen_padding"
-    android:paddingRight="@dimen/screen_padding"
+    android:padding="@dimen/screen_padding"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/ll_dashboard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_vertical"
             android:baselineAligned="false"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/cv_abs_workout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -34,17 +34,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="@color/white"
+                    android:text="@string/zero"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/fo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="@string/workout"
                     android:textAllCaps="true"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -60,7 +60,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="@color/white"
+                    android:text="@string/zero"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <TextView
@@ -69,7 +70,7 @@
                     android:gravity="center"
                     android:text="@string/kcal"
                     android:textAllCaps="true"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -85,7 +86,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="@color/white"
+                    android:text="@string/zero"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <TextView
@@ -94,53 +96,21 @@
                     android:gravity="center"
                     android:text="@string/minute"
                     android:textAllCaps="true"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
             </LinearLayout>
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_vertical"
-            android:padding="@dimen/screen_padding">
-
-            <LinearLayout
-                android:id="@+id/ll_week_goal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/open_sans_light"
-                    android:gravity="end"
-                    android:padding="@dimen/margin_horizontal"
-                    android:text="@string/week_goal"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/tv_week_goal"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="sans-serif-black"
-                    android:padding="@dimen/margin_horizontal"
-                    android:textColor="@color/black" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
             android:id="@+id/cv_abs_workout"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_marginBottom="@dimen/margin_vertical"
-            app:cardCornerRadius="10dp">
+            android:layout_marginTop="@dimen/margin_vertical"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_dashboard">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -154,7 +124,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="@dimen/margin_vertical"
-                android:fontFamily="@font/open_sans_light"
                 android:text="@string/abs_workout"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
@@ -167,8 +136,11 @@
             android:id="@+id/cv_chest_workout"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_marginBottom="@dimen/margin_vertical"
-            app:cardCornerRadius="10dp">
+            android:layout_marginTop="@dimen/margin_vertical"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_abs_workout">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -182,7 +154,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="@dimen/margin_vertical"
-                android:fontFamily="@font/open_sans_light"
                 android:text="@string/chest_workout"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
@@ -195,8 +166,12 @@
             android:id="@+id/cv_arms_workout"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_marginBottom="@dimen/margin_vertical"
-            app:cardCornerRadius="10dp">
+            android:layout_marginTop="@dimen/margin_vertical"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_chest_workout">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -210,7 +185,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="@dimen/margin_vertical"
-                android:fontFamily="@font/open_sans_light"
                 android:text="@string/arms_workout"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
@@ -223,8 +197,12 @@
             android:id="@+id/cv_shoulder_workout"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_marginBottom="@dimen/margin_vertical"
-            app:cardCornerRadius="10dp">
+            android:layout_marginTop="@dimen/margin_vertical"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_arms_workout">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -238,7 +216,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="@dimen/margin_vertical"
-                android:fontFamily="@font/open_sans_light"
                 android:text="@string/shoulder_workout"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
@@ -251,8 +228,12 @@
             android:id="@+id/cv_legs_workout"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_marginBottom="@dimen/margin_vertical"
-            app:cardCornerRadius="10dp">
+            android:layout_marginTop="@dimen/margin_vertical"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_shoulder_workout">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -266,7 +247,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="@dimen/margin_vertical"
-                android:fontFamily="@font/open_sans_light"
                 android:text="@string/legs_workout"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
@@ -275,6 +255,6 @@
 
         </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

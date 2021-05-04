@@ -13,7 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
-        <item name="android:fontFamily">@font/open_sans_light</item>
+        <item name="android:fontFamily">@font/roboto</item>
     </style>
 
     <style name="SplashScreenStyle" parent="Theme.AppCompat.NoActionBar">
